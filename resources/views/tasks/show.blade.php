@@ -28,7 +28,7 @@
                                             </a>
 
                                             <a class="inline-flex items-center justify-center gap-2 rounded-md border border-transparent bg-teal-500 px-2 py-1 text-xs text-white transition-all hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
-                                               href="tasks/{{ $task->id }}/edit">
+                                               href="{{ $task->id }}/edit">
                                                 Edit
                                             </a>
 
