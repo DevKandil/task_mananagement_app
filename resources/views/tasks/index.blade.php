@@ -107,28 +107,28 @@
                                     @foreach ($tasks as $task)
                                         <tr>
 
-                                            <td class="h-px w-px whitespace-nowrap">
+                                            <td class="">
                                                 <div class="px-6 py-3">
                                                     <span class="text-sm text-gray-500">{{ $task->id }}</span>
                                                 </div>
                                             </td>
 
 
-                                            <td class="h-px w-px whitespace-nowrap">
+                                            <td class="">
                                                 <div class="px-6 py-3">
                                                     <span class="text-sm text-gray-500">{{ $task->title }}</span>
                                                 </div>
                                             </td>
 
 
-                                            <td class="h-px w-px whitespace-nowrap">
+                                            <td class="">
                                                 <div class="px-6 py-3">
                                                     <span class="text-sm text-gray-500">{{ $task->description }}</span>
                                                 </div>
                                             </td>
 
 
-                                            <td class="h-px w-px whitespace-nowrap">
+                                            <td class="w-32">
                                                 <div class="px-6 py-3">
                                                     <span class="text-sm text-gray-500">{{ $task->due_date }}</span>
                                                 </div>

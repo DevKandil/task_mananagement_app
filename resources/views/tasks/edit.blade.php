@@ -52,19 +52,28 @@
                                             <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
                                                 <div class="sm:col-span-2">
                                                     <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Task title</label>
-                                                    <input type="text" value="{{ $task->title }}" name="title" id="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type task name" required>
+                                                    <input type="text" value="{{ $task->title }}" name="title" id="title" class="bg-gray-50 border @error('title') border-red-300 @else border-gray-300 @enderror text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type task name">
+                                                    @error('title')
+                                                        <div class="text-red-600">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
 
 
                                                 <div class="sm:col-span-2">
                                                     <label for="due_date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Due Date</label>
-                                                    <input type="date" value="{{ $task->due_date }}" name="due_date" id="due_date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+                                                    <input type="date" value="{{ $task->due_date }}" name="due_date" id="due_date" class="bg-gray-50 border @error('due_date') border-red-300 @else border-gray-300 @enderror text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                                    @error('due_date')
+                                                        <div class="text-red-600">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
 
 
                                                 <div class="sm:col-span-2">
                                                     <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
-                                                    <textarea id="description" name="description" rows="8" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Your description here">{{ $task->description }}</textarea>
+                                                    <textarea id="description" name="description" rows="8" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border @error('description') border-red-300 @else border-gray-300 @enderror focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Your description here">{{ $task->description }}</textarea>
+                                                    @error('description')
+                                                        <div class="text-red-600">{{ $message }}</div>
+                                                    @enderror
                                                 </div>
 
                                             </div>
